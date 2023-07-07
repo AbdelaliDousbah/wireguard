@@ -1,0 +1,7 @@
+[Interface]
+PrivateKey=<server-private-key>
+Address=<server-ip-address>/<subnet>
+SaveConfig=true
+PostUp = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o <public-interface> -j MASQUERADE;
+PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o <public-interface> -j MASQUERADE;
+ListenPort = 51820

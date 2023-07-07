@@ -1,0 +1,9 @@
+[Interface]
+PrivateKey = <client-private-key>
+Address = <client-ip-address>/<subnet>
+SaveConfig = true
+
+[Peer]
+PublicKey = <server-public-key>
+Endpoint = <server-public-ip-address>:51820
+AllowedIPs = 0.0.0.0/0
